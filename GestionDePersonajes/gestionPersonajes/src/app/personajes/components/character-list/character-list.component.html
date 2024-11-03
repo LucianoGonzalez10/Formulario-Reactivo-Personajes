@@ -1,0 +1,12 @@
+<app-character-form (emitirPersonaje)="agregarPersonaje($event)"></app-character-form>
+<ul>
+    @for (item of listaPersonajes; track $index) {
+        <li>
+            Id: {{item.id}} 
+            Nombre: {{item.nombre}} 
+            Alias: {{item.alias}}
+            Descripcion: {{item.descripcion}}
+            <button (click)="eliminarPersonaje(item.id)">Eliminar personaje </button>
+        </li>
+    }
+</ul>

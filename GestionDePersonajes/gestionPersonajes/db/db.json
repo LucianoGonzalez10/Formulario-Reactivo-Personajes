@@ -1,0 +1,11 @@
+{
+  "personajes": [
+    {
+      "id": 1,
+      "nombre": "lucianio",
+      "alias": "maranga",
+      "powers": [],
+      "descripcion": "muy muy fuerte"
+    }
+  ]
+}

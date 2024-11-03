@@ -1,0 +1,37 @@
+<form [formGroup]="formulario" (ngSubmit)="addPersonaje()">
+    <label for="">Personaje: </label>
+
+    <label for="">ID: </label>
+    <input type="number" formControlName="id">
+    @if (formulario.controls['id'].getError('required')) {
+        <div>
+            Campo Requerido
+        </div>
+    }
+
+    <label for="">Nombre: </label>
+    <input type="text" formControlName="nombre">
+    @if (formulario.controls['nombre'].getError('required') && formulario.controls['nombre'].getError('minlength')) {
+        <div>
+            Campo Requerido
+        </div>
+    }
+
+    <label for="">Alias: </label>
+    <input type="text" formControlName="alias">
+    @if (formulario.controls['alias'].getError('required') && formulario.controls['alias'].getError('minlength')) {
+        <div>
+            Campo Requerido
+        </div>
+    }
+
+    <label for="">Descripción: </label>
+    <input type="text" formControlName="descripcion">
+    @if (formulario.controls['descripcion'].getError('required') && formulario.controls['descripcion'].getError('minlength')) {
+        <div>
+            Campo Requerido
+        </div>
+    }
+
+    <button> Añadir Personaje </button>
+</form>
